@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="../js/jquery-1.7.2.js"> </script>
+
+
+</head>
+<style>
+    select{
+        width: 200px;
+        height: 300px;
+    }
+    button{
+        width: 200px;
+    }
+</style>
+
+<body>
+
+<div>
+    <select  multiple="multiple" name="left">
+        <option value="opt1">op1</option>
+        <option value="opt2">op2</option>
+        <option value="opt3">op3</option>
+        <option value="opt4">op4</option>
+        <option value="opt5">op5</option>
+    </select>
+    <select  multiple="multiple" name="rigth">
+        <option value="opt6">opt6</option>
+        <option value="opt7">opt7</option>
+        <option value="opt8">opt8</option>
+        <option value="opt9">opt9</option>
+        <option value="opt10">opt10</option>
+    </select>
+</div>
+
+<div>
+    <button id="toRight">选中右移 </button>
+    <button id="toLeft">选中左移 </button>
+</div>
+<div>
+    <button id="AlltoRight">全部右移 </button>
+    <button id="AlltoLeft">全部左移 </button>
+</div>
+
+<div>
+
+</div>
+
+
+
+</body>
+
+<script>
+    $(function () {
+        $("#toLeft").click(function () {
+        $("select:eq(1)").innerHTML="好好";
+            $("select:eq(1) option:selected").appendTo($("select:eq(0)"));
+
+        })
+    })
+</script>
+
+</html>
