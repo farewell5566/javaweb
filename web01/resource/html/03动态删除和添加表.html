@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="../../../05_book_static/static/javascript/jquery-1.7.2.js"></script>
+    <script>
+        $(function () {
+            $("a").click(function(){
+                    alert("这边有效果");
+                    alert(this.parent().parent());
+                    print(this.parent().parent());
+                    $("table").remove(this.parent().parent());
+                    return false;
+                })
+        })
+
+        $(function () {
+            $("#addSubmit").click(function () {
+                var id = $("#ID");
+                var Name = $("#Name");
+                var email = $("#email");
+                //alert(id + Name + email);
+
+
+
+                var $tdd = $("<tr>\n" +
+                    "        <td width=\"100\">1</td>\n" +
+                    "        <td width=\"100\">小红</td>\n" +
+                    "        <td width=\"100\">123@123</td>\n" +
+                    "        <td width=\"100\"><a href=\"\">delete </a> </td>\n" +
+                    "    </tr>")
+                //添加到显示数据
+                $tdd.appendTo($("table"));
+
+            })
+            return false;
+        })
+
+    </script>
+
+</head>
+<body>
+
+<table  border="1"  width="500"  >
+    <tr style="border: 1px">
+    <th width="30">ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>处理</th>
+</tr>
+    <tr>
+        <td width="100">1</td>
+        <td width="100">小红</td>
+        <td width="100">123@123</td>
+        <td width="100"><a href="">delete </a> </td>
+    </tr>
+
+    <tr>
+        <td width="100">2</td>
+        <td width="100">小刘</td>
+        <td width="100"> 321@123</td>
+        <td width="100"> <a href="">delete</a></td>
+    </tr>
+
+    <tr>
+        <td width="100">3</td>
+        <td width="100">小娄</td>
+        <td width="100"> 543@123</td>
+        <td width="100"> <a href="">delete</a></td>
+    </tr>
+</table>
+
+
+<form action="" >
+    ID<input type="text" id="ID"><br>
+    Name<input type="text" id="Name"><br>
+    邮箱<input type="text" id="email"><br>
+    <input type="submit" id ="addSubmit">
+</form>
+
+
+</body>
+</html>
