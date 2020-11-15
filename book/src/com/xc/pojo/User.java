@@ -1,10 +1,10 @@
 package com.xc.pojo;
 
 public class User {
-    public int id;
-    public String userName;
-    public String password;
-    public String eMail;
+    private int id;
+    private String userName;
+    private String password;
+    private String eMail;
 
     @Override
     public String toString() {
