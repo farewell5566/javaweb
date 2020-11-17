@@ -1,9 +1,10 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>尚硅谷会员登录页面</title>
-<link type="text/css" rel="stylesheet" href="../../static/css/style.css" >
+	<%@include file="/pages/common/header.jsp"%>
 </head>
 <body>
 		<div id="login_header">
@@ -21,14 +22,14 @@
 						<div class="login_box">
 							<div class="tit">
 								<h1>尚硅谷会员</h1>
-								<a href="regist.html">立即注册</a>
+								<a href="regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">
 								<b></b>
 								<span class="errorMsg">请输入用户名和密码</span>
 							</div>
 							<div class="form">
-								<form action="login_success.html">
+								<form action="pages/user/login_success.jsp">
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名" autocomplete="off" tabindex="1" name="username" />
 									<br />
@@ -45,10 +46,6 @@
 					</div>
 				</div>
 			</div>
-		<div id="bottom">
-			<span>
-				尚硅谷书城.Copyright &copy;2015
-			</span>
-		</div>
+        <%@include file="/pages/common/footer.jsp"%>
 </body>
 </html>
